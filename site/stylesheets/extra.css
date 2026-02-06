@@ -1,0 +1,236 @@
+/* Global look */
+:root {
+  --sensus-green: #0f3b2b;
+  --sensus-green-2: #0b2f22;
+  --sensus-accent: #37d27a;
+}
+
+/* Header (top bar) */
+.md-header {
+  background: linear-gradient(90deg, var(--sensus-green-2), var(--sensus-green));
+  box-shadow: none;
+}
+
+/* Links and accents */
+a, .md-typeset a {
+  color: var(--sensus-accent);
+}
+.md-typeset a:hover {
+  opacity: 0.85;
+}
+
+/* Left nav background a bit darker */
+.md-sidebar__scrollwrap {
+  background: #0b2a1f0a;
+}
+
+/* Page headings closer to “big clean marketing typography” */
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.md-typeset h2 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+/* Cards-like blocks (we’ll use this on Home) */
+.sensus-card {
+  border: 1px solid #00000012;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: #ffffff;
+}
+.sensus-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .sensus-grid { grid-template-columns: 1fr; }
+}
+
+/* Hero block */
+.sensus-hero {
+  border-radius: 20px;
+  padding: 28px 26px;
+  background: radial-gradient(1200px 500px at 30% 0%, #15533c, var(--sensus-green-2));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.sensus-hero h1, .sensus-hero p { color: #fff; }
+.sensus-hero p { opacity: 0.9; max-width: 900px; }
+.sensus-hero .accent {
+  color: var(--sensus-accent);
+  font-weight: 700;
+}
+
+/* =========================
+   HOME PAGE LAYOUT
+   ========================= */
+
+.home-hero {
+  background: linear-gradient(135deg, #063226 0%, #0b3f30 45%, #062b21 100%);
+  border-radius: 16px;
+  padding: 44px 36px;
+  margin: 0 0 24px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.home-hero__content {
+  max-width: 980px;
+}
+
+.home-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: rgba(255,255,255,.92);
+  font-size: 13px;
+  letter-spacing: .2px;
+  margin-bottom: 14px;
+}
+
+.home-hero h1 {
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.home-subtitle {
+  color: rgba(255,255,255,.86);
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+  max-width: 820px;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0 14px 0;
+}
+
+.home-note {
+  color: rgba(255,255,255,.78);
+  font-size: 14px;
+  max-width: 880px;
+}
+
+.callout {
+  border-radius: 12px;
+  padding: 14px 14px;
+  margin: 18px 0;
+  background: rgba(0,0,0,.03);
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.callout--info {
+  background: rgba(33, 150, 83, .08);
+  border-color: rgba(33, 150, 83, .25);
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-card {
+  display: block;
+  border-radius: 14px;
+  padding: 14px 14px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  text-decoration: none !important;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  border-color: rgba(0,0,0,.14);
+}
+
+.home-card__title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: rgba(0,0,0,.86);
+}
+
+.home-card__text {
+  color: rgba(0,0,0,.64);
+  line-height: 1.45;
+}
+
+.doc-image {
+  display: block;
+  max-width: 100%;
+  margin: 16px auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 12px 26px rgba(0,0,0,.10);
+}
+
+
+/* =========================
+   LEFT NAVIGATION – UNIFIED COLOR
+   ========================= */
+
+/* All navigation links */
+.md-nav__link {
+  color: #111111 !important;
+}
+
+/* Active page */
+.md-nav__link--active {
+  color: #111111 !important;
+  font-weight: 600;
+}
+
+/* Section containers (e.g. "Services") */
+.md-nav__item--section > .md-nav__link {
+  color: #111111 !important;
+  font-weight: 600;
+}
+
+/* Hover state */
+.md-nav__link:hover {
+  color: #111111 !important;
+  opacity: 0.85;
+}
+
+/* Sidebar title ("Services Documentation") */
+.md-nav__title {
+  color: #111111 !important;
+  font-weight: 600;
+}
+
+/* Make lists more compact in main content */
+.md-content ul li,
+.md-content ol li {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* If list items contain paragraphs, reduce paragraph margins too */
+.md-content li p {
+  margin: 0.2em 0 !important;
+}
+
+/* Slightly reduce overall list spacing */
+.md-content ul,
+.md-content ol {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
